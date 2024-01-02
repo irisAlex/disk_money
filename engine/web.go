@@ -36,21 +36,14 @@ func RegisterRouter(app *gin.Engine) error {
 	var (
 		v1 = app.Group("/")
 	)
-	v1.GET("money", tripartite.Login)
-	v1.GET("index", func(c *gin.Context) {
-		c.HTML(200, "index.html", "nil")
-		c.Abort()
-	})
+
 	v1.GET("account.php", tripartite.Register)
-	v1.GET("mydisk.php", tripartite.Disk)
 	return nil
 }
 
 func newGinEngine() *gin.Engine {
 
 	app := gin.New()
-
-	app.LoadHTMLGlob("html/*")
 	// add gzip mw
 	// http client of prometheus don't decode gzip content, then curl and chrome can decode it.
 

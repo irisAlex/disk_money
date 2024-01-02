@@ -2,13 +2,18 @@ package tripartite
 
 import (
 	"fmt"
+	"log"
+	"money/pkg/mongodb"
 
 	"github.com/gin-gonic/gin"
 )
 
-type login struct {
-	User string
-	Pwd  string
+var modeler = mongodb.NewMongodb() // global
+
+type register struct {
+	User  string `json:"user" bson:"user" valid:"-"`
+	Pwd   string `json:"pwd" bson:"pwd" valid:"-"`
+	Email string `json:"email" bson:"email" valid:"-"`
 }
 
 func Login(c *gin.Context) {
@@ -24,13 +29,12 @@ func Login(c *gin.Context) {
 }
 
 func Register(c *gin.Context) {
-	c.HTML(200, "login.html", "register")
-}
-
-func Vip(c *gin.Context) {
-	c.HTML(200, "vip.html", "vip")
-}
-
-func Disk(c *gin.Context) {
-	c.HTML(200, "disk.html", "disk")
+	var s = &register{}
+	s.User = "libin"
+	s.Pwd = "123456"
+	s.Email = "127@qq.com"
+	err := modeler.InsertOne("register", s)
+	if err != nil {
+		log.Println(err)
+	}
 }
