@@ -1,0 +1,3 @@
+mongodb:
+  endpoint: mongodb://8.140.252.134:27017
+  db: disk
