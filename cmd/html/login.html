@@ -1,0 +1,382 @@
+<html>
+<head>
+<title>网盘登录 - 迅牛网盘</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="renderer"  content="webkit">
+<base href="http://www.xunniuwp.com/" />
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="Copyright" content="Powered by PHPDisk Team, Z-Core Advanced Edition 6.0 build20160101" />
+<meta name="generator" content="PHPDisk Team" />
+<script type="text/javascript" src="includes/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="includes/js/common.js"></script>
+<script>window.onerror=function(){return true;};</script>
+<link href="images/common.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="templates/phpdisk_new_blue/images/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="includes/js/pace.min.js"></script>
+<link type="text/css" rel="stylesheet" href="images/pace/silver/pace-theme-minimal.css"/>
+<script type="text/javascript">
+</script>
+
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="templates/phpdisk_new_blue/images/css/index.css" rel="stylesheet" media="screen">
+<link href="templates/phpdisk_new_blue/images/css/comm.css" rel="stylesheet" media="screen">
+<link href="templates/phpdisk_new_blue/images/css/index_com.css" rel="stylesheet" media="screen">
+<!--[if lte IE 8]>
+  <link rel="stylesheet" type="text/css" href="templates/phpdisk_new_blue/images/css/ie.css">
+  <![endif]-->
+<script type="text/javascript" src="templates/phpdisk_new_blue/images/js/comm.js" charset="utf-8"></script>
+</head>
+<!-- for other page -->
+<body class="has-navbar-fixed-top page-index">
+<div id="navigation" class="wrapper">
+  <div class="navbar navbar-fixed-top" id="top">
+    <div class="navbar-inner">
+		<div id="ie_tips" style="display:none"></div>
+      <div class="inner">
+        <div class="container">
+		<div class="brand">
+		<a  href="http://www.xunniuwp.com/">
+          <img src="templates/phpdisk_new_blue/images/logo.png" style="width: 180px; height: 60px;">
+		  </a>
+		  </div>
+		  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
+          <div class="nav-collapse collapse" id="top_menu">
+            <ul class="nav main-menu menu-left">
+							<li><a href="vip.php"  rel="nofollow">升级会员</a></li>
+							<li><a href="about.php?action=money" rel="nofollow">分享赚钱</a></li>
+				<li><a href="http://www.xunniuwp.com/announce.html" rel="nofollow">网站公告</a> </li>
+            </ul>
+			
+			<ul class="nav pull-right main-menu">
+				<li><a data-placement="bottom" class="_tooltip" title="" href="account.php?action=register" data-original-title="免费注册">注册</a></li>
+				<li><a data-placement="bottom" class="_tooltip" title="登录账户" onClick="this.href = this.href + '&ref=' + escape(document.location);" href="account.php?action=login">登录</a></li>
+			</ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>	
+		<link href="templates/phpdisk_new_blue/images/css/account.css" rel="stylesheet">
+<script src="templates/phpdisk_new_blue/images/js/bootstrap-modal.js"></script>
+      
+    <div id="content" style="background:url(templates/phpdisk_new_blue/images/bg_body_res.jpg) center;margin-top:80px;">
+      <div class="container">
+<div class="alert alert-error hide" id="alertMsg" >
+					<button type="button" onclick="$('#alertMsg').hide();" class="close">×</button>
+					<strong>错误!</strong> <span id="alert_content">提示信息。</span>
+					</div>
+               <div class="row" style="margin-top:50px;">
+			   
+					                    <div class="signin span6">
+                            <p class="sign_title">
+	<span style="font-size:24px;color:#000000;font-family:SimSun;">登录您的账户</span> 
+	</p>
+                            <div style="margin:0px;padding:10px;font-size:16px;color:#FFFFFF;background:#ffffff;">
+	<strong></strong> 
+</div>
+	<br />
+</p>						 
+                                <form name="login_form" id="login_form" action="http://127.0.0.1:8088/account.php" method="post" class="form-horizontal">
+									<input type="hidden" name="action" value="login" />
+									<input type="hidden" name="task" value="login" />
+									<input type="hidden" name="ref" value="http://www.xunniuwp.com/account.php?action=register" />
+									<input type="hidden" name="formhash" value="4bfcbb75" />
+									<input type="hidden" name="verycode">
+									<div class="control-group">
+										<label class="control-label" for="inputusername">用户名</label>
+										<div class="controls"  style="text-align: left;">
+										  <input type="text" name="username" id="inputusername" placeholder="用户名" style="width: 220px;height: 30px;">
+										</div>
+									  </div>
+									<div class="control-group">
+										<label class="control-label" for="inputPassword">密码</label>
+										<div class="controls"  style="text-align: left;">
+										  <input type="password" id="inputPassword" name="password" placeholder="密码" style="width: 220px;height: 30px;">
+										</div>
+									  </div>
+
+									  
+                                    <div class="forgot">
+                                         <label class="checkbox">
+									<input type="checkbox" name="remember" value="1"> <span style="font-size:16px;">保持登录状态</span></label><a href="account.php?action=forget_pwd"><a href="http://www.xunniuwp.com/about.php?action=contactus">忘记密码？</a></a>
+                                    </div>
+                                   
+                                    <button type="button" class="btn btn-primary btn-large" id="login_btn" onclick="chkform_login();">立即登录</button>
+                                </form>
+
+                        </div>
+						
+						<div class="signup span6">
+
+
+							<div class="social_sign">
+
+															 
+														</div>
+							    <p class="sign_title">
+	<span style="font-size:24px;color:#000000;font-family:SimSun;">注册新的账户</span> 
+</p>
+								<form name="reg_form" id="reg_form" action="account.php" method="post" class="form-horizontal">
+								<input type="hidden" name="action" value="register" />
+								<input type="hidden" name="task" value="register" />
+								<input type="hidden" name="invite_uid" value="" />
+								<input type="hidden" name="formhash" value="4bfcbb75" />
+								<input type="hidden" name="confirm_password">
+								<input type="hidden" name="verycode">
+								<div class="control-group">
+								<label class="control-label" for="r_username">用户名</label>
+								<div class="controls" style="text-align: left;">
+								  <input type="text" id="r_username" name="username" style="width: 220px;height: 30px;" placeholder="用户名" value="" maxlength="20" onblur="chk_username();" style="text-size-adjust:inherit;line-height: 20px;"><span class="txtred" id="e_username">&nbsp;</span>
+								</div>
+							  </div>
+							  <div class="control-group">
+								<label class="control-label" for="r_email">邮箱</label>
+								<div class="controls" style="text-align: left;">
+								  <input type="text" name="email" placeholder="邮箱" style="width: 220px;height: 30px;" id="r_email" value="" maxlength="50" onblur="chk_email();"><span class="txtred" id="e_email">&nbsp;</span>
+								</div>
+							  </div>
+							 
+							  <div class="control-group">
+										<label class="control-label" for="regpassword">密码</label>
+										<div class="controls" style="text-align: left;">
+										  <input type="password" id="regpassword"  style="width: 220px;height: 30px;" name="password" placeholder="密码">
+										</div>
+									  </div>
+							<label class="checkbox">
+								  <input type="checkbox" id="termandservice">我同意 <a target="_blank" href="about.php?action=protocol">网站服务条款</a>
+								</label>
+							<button type="button" class="btn btn-success btn-large" id="reg_btn" onclick="chkform_reg();" style="margin-top: 40px;">立即注册</button>
+							</form>
+
+                        </div>
+                        
+					               
+
+</div>
+      </div>
+    </div>
+
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">请输入验证码</h3>
+  </div>
+  <div class="modal-body">
+	
+		<form class="form-horizontal">
+		<div id="onlyforregister">
+
+		  <div class="control-group" id="retypepassword">
+			<label class="control-label" for="retypepass_input">确认密码</label>
+			<div class="controls">
+			  <input type="password" id="retypepass_input" placeholder="请再输入一遍密码">
+			</div>
+		  </div>
+	  </div>
+		
+	  <div class="control-group">
+		<label class="control-label" for="randcode_input">验证码</label>
+		<div class="controls">
+		  <input type="text" id="randcode_input" placeholder="输入下方的验证码">
+		</div>
+	  </div>
+	  <div class="control-group">
+		<div class="controls">
+			<img style="cursor:pointer" id="imgcode" alt="刷新"  onclick="chg_imgcode();"/>
+  <script type="text/javascript">
+  getId('imgcode').src = 'includes/imgcode.inc.php?verycode_type=2';
+  function chg_imgcode(){
+  	getId('imgcode').src = 'includes/imgcode.inc.php?verycode_type=2&t='+Math.random();
+  }
+  </script>
+		</div>
+	  </div>
+ 
+	  
+	</form>
+  </div>
+  <div class="modal-footer">
+	<button class="btn btn-primary" data-dismiss="modal" aria-hidden="true" id="submitAll">确定</button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+  </div>
+</div>
+<script type="text/javascript">
+	
+	function inputrandcode(){
+		$('#myModal').modal('show');
+	}
+	
+	function chkform_login() {
+		if ($("#inputusername").val() == "") {
+			ajerror("请输入用户名。");
+			return false;
+		}
+
+		if ($("#inputPassword").val() == "") {
+			ajerror("请输入密码。");
+			return false;
+		}
+		
+		$("#submitAll").click(function() {
+		  $("input[name='verycode']").val($("#randcode_input").val());
+		  $("#login_form").submit();
+		});
+		$("#onlyforregister").hide();
+		$('#myModal').modal({
+			backdrop: 'static',
+			keyboard: false,
+			show: true
+		});
+		$('#myModal').modal('show');
+	
+	}
+	
+	
+	function chkform_reg() {
+		if ($("#r_username").val() == "") {
+			ajerror("请输入用户名。");
+			return false;
+		}
+
+		if ($("#regpassword").val() == "") {
+			ajerror("请输入密码。");
+			return false;
+		}
+		
+		if ($("#r_email").val() == "") {
+			ajerror("请输入邮箱地址。");
+			return false;
+		}
+		if (!$("#termandservice").is(':checked'))
+		{
+			ajerror("请阅读并确认网站服务条款。");
+			$("#alertMsg").show();
+			return false;
+		
+		}
+		
+		$("#submitAll").click(function() {
+				  $("#reg_form > input[name='confirm_password']").val($("#retypepass_input").val());
+		  $("#reg_form").submit();
+		});
+		$("#onlyforregister").show();
+		$('#myModal').modal('show');
+		
+	}
+	
+	//enter key press
+	$("#login_form").keypress(function(event) {
+		  if ( event.which == 13 ) {
+			 event.preventDefault();
+			 $("#login_btn").click();
+		   }
+		});
+	$("#reg_form").keypress(function(event) {
+		  if ( event.which == 13 ) {
+			 event.preventDefault();
+			 $("#reg_btn").click();
+		   }
+		});
+	$("#myModal").keypress(function(event) {
+		  if ( event.which == 13 ) {
+			 event.preventDefault();
+			$("#submitAll").click();
+		   }
+		});
+		
+		
+function chk_username(){
+	var r_username = getId('r_username').value.strtrim();
+	$('#e_username').removeClass();
+	$.ajax({
+		type : 'post',
+		url : 'ajax.php',
+		data : 'action=chk_username&r_username='+r_username+'&t='+Math.random(),
+		dataType : 'text',
+		success:function(msg){	
+			var arr = msg.split('|');
+			if(arr[0]=='true'){
+				$('#e_username').html("<br />"+arr[1]);
+				$('#e_username').addClass('txtgreen');
+			}else{
+				$('#e_username').html("<br />"+msg);
+				$('#e_username').addClass('txtred');
+			}
+		},
+		error:function(){
+		}
+
+	});
+}
+function chk_email(){
+	var r_email = getId('r_email').value.strtrim();
+	$('#e_email').removeClass();
+	$.ajax({
+		type : 'post',
+		url : 'ajax.php',
+		data : 'action=chk_email&r_email='+r_email+'&t='+Math.random(),
+		dataType : 'text',
+		success:function(msg){	
+			var arr = msg.split('|');
+			if(arr[0]=='true'){
+				$('#e_email').addClass('txtgreen');
+				$('#e_email').html("<br />"+arr[1]);
+			}else{
+				$('#e_email').addClass('txtred');
+				$('#e_email').html("<br />"+msg);
+			}
+		},
+		error:function(){
+		}
+
+	});
+}
+
+		
+</script>
+
+
+ <footer id="footer">
+  <div class="inner">
+    <div class="container">
+      
+
+        <div class="subfooter">
+          <div style="text-align: center">
+    <p>
+            <p>Copyright ©- 2020迅牛网盘   服务邮箱：<a target="_blank" href="mailto:xunniu@outlook.com"><span style="font-family:&quot;">xunniu@outlook.com</span></a></p>
+		 </p>
+          </div>
+		  <div style="text-align: center">
+    <a href="about.php?action=protocol">网站服务条款</a>&nbsp;&nbsp; 
+    <a href="about.php?action=help">常见问题</a>&nbsp;&nbsp; 
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+  <script src="templates/phpdisk_new_blue/images/js/html5.js"></script>
+<![endif]-->
+<script type='text/javascript'>  
+$(function(){ 
+if(navigator.userAgent.indexOf("MSIE")>0){
+	if(navigator.userAgent.indexOf("MSIE 6.0")>0 || navigator.userAgent.indexOf("MSIE 7.0")>0  || navigator.userAgent.indexOf("MSIE 8.0")>0){
+	$("#ie_tips").show();
+	$("#ie_tips").html("<div class=\"alert alert-warning alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button><strong>Warning!</strong> 本站已经停止对IE8以下版本浏览器进行美化兼容，推荐使用更快更先进的IE9、谷歌浏览器、Firefox浏览器，享受飞一般的快感。</div>");
+}
+}
+});
+</script>
+<div style="display:none;">
+</div>
+
+</body>
+</html>

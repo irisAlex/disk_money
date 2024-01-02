@@ -1,0 +1,332 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="renderer"  content="webkit">
+<base href="http://www.xunniuwp.com/" />
+<link rel="shortcut icon" href="favicon.ico">
+<meta name="Copyright" content="Powered by PHPDisk Team, Z-Core Advanced Edition 6.0 build20160101" />
+<meta name="generator" content="PHPDisk Team" />
+<script type="text/javascript" src="includes/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="includes/js/common.js"></script>
+<script>window.onerror=function(){return true;};</script>
+<link href="images/common.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="templates/phpdisk_new_blue/images/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="includes/js/pace.min.js"></script>
+<link type="text/css" rel="stylesheet" href="images/pace/silver/pace-theme-minimal.css"/>
+<script type="text/javascript">
+</script>
+
+		<link href="templates/phpdisk_new_blue/images/css/comm.css" rel="stylesheet" media="screen">
+		<link href="templates/phpdisk_new_blue/images/css/mini.css" rel="stylesheet" media="screen">
+		<link href="templates/phpdisk_new_blue/images/css/mini2.css" rel="stylesheet" media="screen">
+		<!--[if IE 7]>
+			  <link rel="stylesheet" href="templates/phpdisk_new_blue/images/css/font-awesome-ie7.min.css" />
+			<![endif]-->
+			
+			<!--[if lte IE 8]>
+			  <link rel="stylesheet" href="templates/phpdisk_new_blue/images/css/comm-ie.min.css" />
+			<![endif]-->
+		<script type="text/javascript" src="templates/phpdisk_new_blue/images/js/comm.js" charset="utf-8"></script>
+		<script type="text/javascript" src="templates/phpdisk_new_blue/images/js/jquery.form.js"></script>
+	</head>
+	<body>
+	<div id="infoModal" class="modal fade hide" aria-hidden="false"></div>
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div id="ie_tips" style="display:none"></div>
+				<div class="container-fluid" style="height: 0px;">
+				<a class="brand" href="http://www.xunniuwp.com/"><img src="templates/phpdisk_new_blue/images/logo.png"  style="height:80px" alt="迅牛网盘" /> </a>
+								<ul class="nav main-menu menu-left">
+					<li id="m_upload"><a href="mydisk.php?item=profile&menu=upload&action=multi_upload">上传</a></li>
+                    <li id="m_file"><a href="mydisk.php?item=profile&menu=file&action=files">文件</a></li>
+					<li id="m_income"><a href="mydisk.php?item=profile&menu=income&action=income">提现</a></li>
+					<li id="m_plan"><a href="mydisk.php?item=profile&menu=plan&action=income_plans">网赚</a></li>
+					<li id="m_promo"><a href="mydisk.php?item=profile&menu=promo&action=invite">推广</a></li>
+					<li id="m_cp"><a href="mydisk.php?item=profile&menu=cp">面板</a></li>
+					<li id="m_pwd"><a href="mydisk.php?item=profile&menu=pwd&action=mod_pwd">密码</a></li>					
+				</ul>
+				<ul class="nav ace-nav pull-right">
+			  <li class="green">
+						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+							<i class="icon-envelope-alt icon-only"></i>
+							<span class="badge badge-success bold"></span>
+						</a>
+						<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-closer">
+							<li class="nav-header">
+								<i class="icon-envelope"></i>  条未读信息
+							</li>
+							<li>
+								<a href="mydisk.php?item=profile&menu=cp&action=message">
+									查看所有系统信息
+									<i class="icon-arrow-right"></i>
+								</a>
+							</li>									
+	
+						</ul>
+					</li>
+					<li class="light-blue user-profile" style="background-color:f5f5f5">
+						<a class="user-menu dropdown-toggle" href="#" data-toggle="dropdown">							<img alt="alex123456的头像" src="templates/phpdisk_new_blue/images/user-nopic.png" class="nav-user-photo" />
+														<span id="user_info"><small>alex123456</small> 欢迎回来</span><i class="icon-caret-down"></i></a>
+						<ul class="pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer" id="user_menu">
+							<li><a href="mydisk.php?item=profile&menu=cp"><i class="icon-home"></i> 会员中心</a></li>
+							<li><a href="mydisk.php?item=profile&menu=file&action=files"><i class="icon-list"></i> 文件管理</a></li>
+							<li><a href="mydisk.php?item=profile&menu=upload&action=multi_upload"> <i class="icon-cloud-upload"></i> 上传文件</a></li>
+							<li><a href="space_alex123456.html"> <i class="icon-hdd"></i> 网盘空间</a></li>
+							<li class="divider"></li>
+														<li><a href="account.php?action=logout" onClick="return confirm('确认退出帐号?');"><i class="icon-off"></i> 安全退出</a></li>
+						</ul>
+					</li>
+					
+					<!--<li class="light-blue user-profile" data-rel="tooltip" data-placement="bottom" title="帮助信息">
+						<a class="user-menu dropdown-toggle" href="?item=help&action=index" >
+							<i class="icon-info"></i>
+						</a>
+					</li>-->
+					
+			  </ul>
+				<!--div id="nav-search-top" class="pull-right"-->
+			</div>
+		   </div><!--/.container-fluid-->
+		  </div><!--/.navbar-inner-->
+		</div><!--/.navbar-->
+		<div class="container-fluid" id="main-container">
+					<a href="#" id="menu-toggler"><span></span></a><!-- menu toggler -->
+
+			<div id="sidebar">
+				
+				<ul class="nav nav-list">
+			<li id="n_default"><a href="mydisk.php?item=profile&menu=cp"><i class="icon icon-user"></i><span>会员中心</span></a></li>
+		
+		<li id="n_message"><a href="mydisk.php?item=profile&menu=cp&action=message"><i class="icon icon-envelope"></i><span>站内消息</span></a></li>
+		<li id="n_chg_logo"><a href="mydisk.php?item=profile&menu=cp&action=chg_logo"><i class="icon icon-cogs"></i><span>网盘设置</span></a></li>
+				
+				</ul><!--/.nav-list-->				
+				
+				<div id="sidebar-collapse"><i class="icon-double-angle-left"></i></div>
+                
+<script type="text/javascript">
+$('#m_cp').addClass('current');
+$('#n_').addClass('active');
+</script>
+				
+			</div><!--/#sidebar-->
+			<script language="javascript">
+function myspace_stat(){
+	$('#myspace_stat').html("<img src=\"images/ajax_loading.gif\" align=\"absmiddle\" border=\"0\" /><span class=\"f14\">Loading...</span>");
+	$.ajax({
+		type : 'post',
+		url : 'ajax.php',
+		data : 'action=myspace_stat',
+		dataType : 'json',
+		success:function(cb){
+			if(cb.success){
+				$('#myspace_stat').html(cb.data.used_space);
+			}else{
+				$('#myspace_stat').html(cb.msg);
+			}
+		},
+		error:function(){
+		}
+
+	});
+}
+</script>
+<div id="main-content" class="clearfix">
+	<div id="page-content" class="clearfix">
+		<div class="page-header position-relative row-fluid">
+			<div class="span6">
+				<h1>会员中心</h1>
+			</div>
+			<div class="span6 text-right">
+			</div>
+		</div>
+
+		<div class="row-fluid">
+		<div class="span6">
+		<div class="panel panel-default">
+			<div class="panel-heading">账户概览</div>
+			<div class="panel-body">
+			<ul style="margin-left:0px;">
+			<a href="http://www.xunniuwp.com/mydisk.php?item=profile&menu=pwd&action=mod_pwd"><span style="font-size:18px;color:#337FE5;"><strong>若共享账户密码被修改无法找回</strong></span></a>
+				<li style="line-height: 35px;"><b>用户名</b>：alex123456  <a href=vip.php title="VIP"><img src="images/vip.gif"  class="vip_icon" /></a>，<b>当前网赚套餐：</b>1</li>
+								<li style="line-height: 35px;"><b>VIP结束时间</b>：<span class="txt_r">2024-01-11</span>&nbsp;&nbsp;<a href="vip.php">购买/续费VIP</a></li>
+												<li style="line-height: 35px;" class="clear"><b>个人主页</b>：<input type="text" class="span8" size="50"  id="myspace_url" value="http://www.xunniuwp.com/space_alex123456.html" onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');" readonly/><input type="button" value="复制链接"  onclick="$('#myspace_url').select();ie_copy_text('myspace_url','个人主页链接复制成功');" class="btn btn-small"/></li>				
+				<li style="line-height: 35px;"><b>联系邮箱</b>：libin_kongjie@126.com</li>
+				<li style="line-height: 35px;"><b>可提现金额</b>：<span class="txt_r">￥0</span>&nbsp;&nbsp;<a href="mydisk.php?item=profile&menu=income&action=to_income">【申请提现】</a>&nbsp;<a href="pay.php"></a></li>
+				<li style="line-height: 35px;"><b>占用空间</b>：<span id="myspace_stat"> B</span>/<b>不限</b>&nbsp;&nbsp;<a href="javascript:myspace_stat();" title="更新" ><img src="images/reload.gif" /></a></li>
+                <li style="line-height: 35px;"><b>文件违规举报</b>：xunniu@outlook.com</li>
+                
+			  </ul>
+			</div>
+		</div>
+		</div>
+		<div class="span6">
+		<div class="panel panel-default">
+			<div class="panel-heading">网站公告</div>
+			<div class="panel-body">
+				<ul style="margin-left:0px;">
+				
+					<li style="padding: 4px;"><a href="ann_list-1.html" target="_blank"><span style='color:#E53333;font-size:18px;'><strong>净网2020 · 严打不良信息传播行为</strong></span></a><span class="badge pull-right">2020-07-10</span></li>
+
+					<li style="padding: 4px;"><a href="ann_list-2.html" target="_blank"><span style='font-size:18px;'>每天支付一次</span></a><span class="badge pull-right">2021-03-22</span></li>
+
+					<li style="padding: 4px;"><a href="ann_list-3.html" target="_blank"><span style='font-size:18px;'>周二、周四、周六、周日双倍</span></a><span class="badge pull-right">2020-08-13</span></li>
+
+					<li style="padding: 4px;"><a href="ann_list-4.html" target="_blank"><span style='font-size:18px;'>关于出租共享账户</span></a><span class="badge pull-right">2020-07-13</span></li>
+
+				</ul>
+			</div>
+		</div>
+	</div>
+	  </div><!-- #main-content -->
+	<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">收益信息</div>
+   <table class="table table-hover dataTable" aria-describedby="table_files_info">
+	<thead role="alert" aria-live="polite" aria-relevant="all">
+		<tr>
+			<th class="center">PC端积分</th>
+			<!--th class="center">手机端积分</th-->
+			<th class="center">今日积分</th>
+			<th class="center">下线积分</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td style="border-right: 1px solid #DDDDDD;" class="center">	0	</td>
+			<!--td  style="border-right: 1px solid #DDDDDD;" class="center">0</td-->
+			<td  style="border-right: 1px solid #DDDDDD;"  class="center">0<span class="txtred">(双倍)</span></td>
+			<td  style="border-right: 1px solid #DDDDDD;"  class="center">0</td>
+		</tr>
+	</tbody>
+  </table>
+</div>
+  </div><!--/.fluid-container#main-container-->
+        
+</div>
+</div>
+<script type="text/javascript">
+function sign_day(){
+	$('#sign_tips').html("<img src=\"images/ajax_loading.gif\" align=\"absmiddle\" border=\"0\" /><span class=\"f14\">Loading...</span>");
+	$.ajax({
+		type : 'post',
+		url : 'ajax.php',
+		data : 'action=sign_day',
+		dataType : 'json',
+		success:function(cb){
+			if(cb.success){
+				$('#sign_tips').html(cb.msg);
+				$('#sign_img').addClass('current');
+				$('#sign_img').attr('onclick','');
+			}else{
+				$('#sign_tips').html(cb.msg);
+			}
+		},
+		error:function(){
+		}
+
+	});
+}
+$('#sign_tips').html('<span class="txtgray">今天签到成功将送 <b class="txtred"></b> 金钱</span>');
+</script>
+
+<script type="text/javascript">document.title = $('h1').html()+' - 迅牛网盘';</script>
+<style>
+.ro_box{position:fixed; right: 3px; bottom:3px; width:300px; height:auto; background-color:#FFFFFF; border:1px solid #ccc}
+.ro_box .tit{ background:#609AC6; border-bottom:1px solid #ccc; padding:3px; color:#FFFFFF}
+.ro_box ul{padding:0; margin:0}
+.ro_box li{padding:5px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#sp_txt').click(function(){
+	$('#ann_list').slideToggle(300);
+	});
+	$('.ann_list ul li').each(function(){
+		var li_obj = $(this).find("span");
+		$(this).mouseover(function(){
+			li_obj.css("display","");
+		}).mouseout(function(){
+			li_obj.css("display","none");
+		});
+	});
+});
+</script>
+
+
+<strong> </strong> 
+<p>
+	<br />
+</p>
+	</ul>
+</div>
+</div>
+
+<!--<a href="#" id="btn-scroll-up" class="btn btn-small btn-inverse">
+			<i class="icon-double-angle-up icon-only"></i>
+		</a>-->
+		
+				<div class="widget-box collapsed help-dialog">
+			<div class="widget-header widget-header-small header-color-blue2 ">
+				<h6>
+					寻求帮助？
+				</h6>
+
+				<div class="widget-toolbar">
+					
+					<a href="#" data-action="collapse">
+						<i class="icon-chevron-up"></i>
+					</a>
+
+					<a href="#" data-action="close">
+						<i class="icon-remove"></i>
+					</a>
+				</div>
+			</div>
+
+			<div class="widget-body">
+				<div class="widget-main">
+		<h5>客服邮箱</h5>
+		<ul class="unstyled">
+<li>
+<a target="_blank" href="mailto:%20xunniu@outlook.com"><span style="font-family:&quot;font-size:18px;">xunniu@outlook.com</span></a><span style="font-size:18px;">&nbsp;</span>
+</li>        </ul>
+		<!--<h5>广告业务</h5>-->
+        <ul class="unstyled">
+            <!--<li> 广告投放 <a href="http://wpa.qq.com/msgrd?V=1&amp;uin=519205859" target="_blank"><img src="http://wpa.qq.com/pa?p=2:519205859:41" alt="123456789" width="77" height="22" border="0" /></a><a href="http://wpa.qq.com/msgrd?V=1&uin=519205859" target="_blank"></a> </li>-->
+          </ul>
+		<!-- <h5>投诉建议</h5>-->
+        <ul class="unstyled">
+			<!--<li> 投诉邮箱: xun-niu@foxmail.com </li>-->
+          </ul>
+		  <!--
+		  <h5>官方QQ群</h5>
+        <ul class="unstyled">
+            <li> 赚钱收益群： </li>
+          </ul>-->
+				</div>
+			</div>
+		</div>
+		<a class="btn-scroll-up btn btn-sm btn-inverse" id="btn-scroll-up" href="#">
+				<i class="icon-double-angle-up icon-only bigger-110"></i>
+			</a>
+<script type="text/javascript">var action=document.getElementById("");if(!action){document.getElementById("index").className='active';}else{action.className='active';}</script>
+<script type='text/javascript'>  
+$(function(){ 
+if(navigator.userAgent.indexOf("MSIE")>0){
+	if(navigator.userAgent.indexOf("MSIE 6.0")>0 || navigator.userAgent.indexOf("MSIE 7.0")>0  || navigator.userAgent.indexOf("MSIE 8.0")>0){
+	$("#ie_tips").show();
+	$("#ie_tips").html("<div class=\"alert alert-warning alert-dismissable\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button><strong>Warning!</strong> 本站已经停止对IE8以下版本浏览器进行美化兼容，推荐使用更快更先进的IE9、谷歌浏览器、Firefox浏览器，享受飞一般的快感。</div>");
+}
+}
+});
+</script>
+<div style="display:none;">
+</div>
+
+</body>
+</html>
