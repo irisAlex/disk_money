@@ -3,11 +3,13 @@ package tripartite
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
-	"log"
 	"money/pkg/mongodb"
 
+	"errors"
+
 	"github.com/gin-gonic/gin"
+	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 const (
@@ -21,6 +23,7 @@ const (
 )
 
 var modeler = mongodb.NewMongodb() // global
+var UserTab = "user"
 
 type register struct {
 	User  string `json:"user" bson:"user" valid:"-"`
@@ -65,25 +68,37 @@ func ResJSON(c *gin.Context, status int, v interface{}) {
 
 func Login(c *gin.Context) {
 
-	content, err := New().SetHeaders().SetBody("action=get_vip_fl&file_id=4564078").Post("http://www.xunniuwp.com/ajax.php")
-
-	fmt.Print(err)
-
-	if err != nil {
-		fmt.Println(content.String())
-	}
-	fmt.Println(content.String())
 }
 
 func Register(c *gin.Context) {
 	var s = &register{}
 	ParseJSON(c, s)
 
-	err := modeler.InsertOne("register", s)
-	if err != nil {
-		log.Println(err)
-		ResJSON(c, 400, "客户端错误")
+	if getUserInfo(s.User) == nil {
+		ResJSON(c, 401, "用户已经存在")
+		return
+	}
+	if modeler.InsertOne(UserTab, s) != nil {
+		ResJSON(c, 500, "客户端错误")
+		return
 	}
 
 	ResJSON(c, 200, "注册成功")
+}
+
+func getUserInfo(name string) error {
+	var (
+		svc    = new(register)
+		filter = bson.M{"user": name}
+	)
+
+	err := modeler.FindOne(UserTab, filter, bson.M{}, svc)
+	if err == mongo.ErrNoDocuments {
+		return errors.New("ErrNotFoundRecord")
+	}
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
