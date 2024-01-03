@@ -37,7 +37,7 @@ func RegisterRouter(app *gin.Engine) error {
 		v1 = app.Group("/")
 	)
 
-	v1.GET("account.php", tripartite.Register)
+	v1.POST("register", tripartite.Register)
 	return nil
 }
 
