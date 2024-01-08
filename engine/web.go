@@ -12,7 +12,7 @@ import (
 )
 
 func StartServer(ctx context.Context) {
-	addr := fmt.Sprintf("%s:%d", "127.0.0.1", 8088)
+	addr := fmt.Sprintf("%s:%d", "172.17.36.168", 8088)
 	serv := &http.Server{
 		Addr:         addr,
 		Handler:      newGinEngine(),
