@@ -1,4 +1,4 @@
-package tripartite
+package aes
 
 import (
 	"bytes"
@@ -14,6 +14,8 @@ import (
 	"strconv"
 	"time"
 )
+
+const AUTHORIZATION = "9505C098192D4BCECE6C22F77E63BFB2"
 
 //加密字符串
 func GcmEncrypt(plaintext string) (string, error) {
@@ -113,7 +115,7 @@ func JSONMarshal(obj interface{}) ([]byte, error) {
 	return res, nil
 }
 
-func getToken(user string) string {
+func GetToken(user string) string {
 	effectsTime := user + "|" + strconv.FormatInt(time.Now().Add(24*time.Hour).Unix(), 10) //effects time after
 	token, _ := GcmEncrypt(effectsTime)
 	return token

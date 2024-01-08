@@ -4,7 +4,8 @@ import (
 	"io/ioutil"
 	"money/pkg/mongodb"
 
-	"github.com/go-acme/lego/v3/log"
+	"money/pkg/log"
+
 	"gopkg.in/yaml.v2"
 )
 
@@ -19,6 +20,7 @@ var (
 
 type Config struct {
 	Mongodb mongodb.Config `yaml:"mongodb"`
+	Log     log.Config
 	///Redis   redisdb.Config `yaml:"redis"`
 }
 

@@ -1,4 +1,4 @@
-package tripartite
+package client
 
 import (
 	"sync"

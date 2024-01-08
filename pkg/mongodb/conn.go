@@ -59,8 +59,6 @@ func Init(hctx context.Context, cfg *Config) (func(), error) {
 	if !strings.HasPrefix(cfg.Endpoint, SchemeMongoDBSRV+"://") && !strings.HasPrefix(cfg.Endpoint, SchemeMongoDB+"://") {
 		cfg.Endpoint = fmt.Sprintf("%s://%s", SchemeMongoDB, cfg.Endpoint)
 	}
-
-	fmt.Println(cfg.Endpoint, dbName)
 	m := &Mongodb{
 		warning:  warning,
 		serious:  serious,

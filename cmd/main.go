@@ -3,9 +3,9 @@ package main
 import (
 	"context"
 	"fmt"
-	"log"
 	"money/conf"
 	"money/engine"
+	"money/pkg/log"
 	"money/pkg/mongodb"
 	"os"
 	"path/filepath"
@@ -36,6 +36,7 @@ func main() {
 	//创建一个服务
 	conf.Init()
 	cfg := conf.GetConfig()
+	log.Init(&cfg.Log)
 	_, err = mongodb.Init(ctx, &cfg.Mongodb)
 	if err != nil {
 		log.Fatalf("mongodb init failed, err: %s", err.Error())

@@ -1,3 +1,13 @@
 mongodb:
   endpoint: mongodb://8.140.252.134:27017
   db: monery
+
+log:
+  console: true
+  type: log
+  level: debug
+  path: ./logs
+  filename: logging
+  buffer: 10
+  maxage: 30
+  rotation: 24
