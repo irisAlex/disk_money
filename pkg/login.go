@@ -62,9 +62,13 @@ type login struct {
 func Login(c *gin.Context) {
 	lg := &login{}
 	ParseJSON(c, lg)
+	if lg.User == "" || lg.Pwd == "" {
+		ResJSON(c, 400, "用户名或密码错误不能为空")
+		return
+	}
 
 	userI, err := verifyUserInfo(lg.User, lg.Pwd)
-	if userI == nil && err != nil {
+	if userI == nil || err != nil {
 		ResJSON(c, 400, "用户名或密码错误")
 		return
 	}
@@ -119,7 +123,10 @@ func Verify(c *gin.Context) {
 func Register(c *gin.Context) {
 	var ri = &register{}
 	ParseJSON(c, ri)
-
+	if ri.User == "" || ri.Pwd == "" || ri.Email == "" {
+		ResJSON(c, 400, "注册信息不能为空")
+		return
+	}
 	svc, err := getUserInfo(ri.User, ri.Email)
 	if svc != nil && err == nil {
 		ResJSON(c, 400, "用户已经存在或email已被注册")
