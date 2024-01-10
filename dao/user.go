@@ -2,7 +2,7 @@ package dao
 
 import (
 	"errors"
-
+	"money/model"
 	"money/pkg/mongodb"
 
 	"go.mongodb.org/mongo-driver/bson"
@@ -10,32 +10,16 @@ import (
 )
 
 var (
-	modeler = mongodb.NewMongodb() // global
-	UserTab = "user"
+	Modeler = mongodb.NewMongodb()
+	UserTab = model.TableName()
 )
 
-type RegisterUserInfo struct {
-	User  string `json:"user" bson:"user" valid:"-"`
-	Pwd   string `json:"pwd" bson:"pwd" valid:"-"`
-	Email string `json:"email" bson:"email" valid:"-"`
-}
-
-type LoginUserInfo struct {
-	User string `json:"user"`
-	Pwd  string `json: "pwd"`
-}
-
-type VerifyUserInfo struct {
-	Token string `json:"token"`
-	User  string `json:"user"`
-}
-
-func VerifyUser(u, p string) (*LoginUserInfo, error) {
+func VerifyUser(u, p string) (*model.LoginUserInfo, error) {
 	var (
-		user   = new(LoginUserInfo)
+		user   = new(model.LoginUserInfo)
 		filter = bson.M{"user": u, "pwd": p}
 	)
-	err := modeler.FindOne(UserTab, filter, bson.M{}, user)
+	err := Modeler.FindOne(UserTab, filter, bson.M{}, user)
 	if err == mongo.ErrNoDocuments {
 		return nil, errors.New("ErrNotFoundRecord")
 	}
@@ -47,13 +31,13 @@ func VerifyUser(u, p string) (*LoginUserInfo, error) {
 
 }
 
-func GetUserInfo(name, email string) (*RegisterUserInfo, error) {
+func GetUserInfo(name, email string) (*model.RegisterUserInfo, error) {
 	var (
-		svc    = new(RegisterUserInfo)
+		svc    = new(model.RegisterUserInfo)
 		filter = bson.M{"user": name, "email": email}
 	)
 
-	err := modeler.FindOne(UserTab, filter, bson.M{}, svc)
+	err := Modeler.FindOne(UserTab, filter, bson.M{}, svc)
 	if err == mongo.ErrNoDocuments {
 		return nil, errors.New("ErrNotFoundRecord")
 	}
@@ -64,11 +48,8 @@ func GetUserInfo(name, email string) (*RegisterUserInfo, error) {
 	return svc, nil
 }
 
-type user struct {
-}
-
-func InsertUser(u *RegisterUserInfo) error {
-	if err := modeler.InsertOne(UserTab, u); err != nil {
+func InsertUser(u *model.RegisterUserInfo) error {
+	if err := Modeler.InsertOne(UserTab, u); err != nil {
 
 		return err
 	}

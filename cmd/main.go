@@ -3,8 +3,8 @@ package main
 import (
 	"context"
 	"fmt"
+	"money/app"
 	"money/conf"
-	"money/engine"
 	"money/pkg/log"
 	"money/pkg/mongodb"
 	"os"
@@ -41,6 +41,7 @@ func main() {
 	if err != nil {
 		log.Fatalf("mongodb init failed, err: %s", err.Error())
 	}
-	engine.StartServer(ctx)
+
+	app.InitServer().Start()
 
 }
