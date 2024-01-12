@@ -2,38 +2,37 @@ package model
 
 import "time"
 
-type RegisterUserInfo struct {
-	User        string    `json:"user" bson:"user" valid:"-"`
-	Pwd         string    `json:"pwd" bson:"pwd" valid:"-"`
-	Email       string    `json:"email" bson:"email" valid:"-"`
-	RealIP      string    `json:"real_ip" bson:"real_ip"`
-	ExpiredTime time.Time `json:"expired_time" bson:"expired_time"`
-	CreateTime  time.Time `json:"create_time" bson:"create_time"`
-	DownTime    int       `json:"down_time" bson:"down_time"`
-	Vip         int       `json:"vip" bson:"vip"`
-	SetMeal     int       `json:"set_meal" bson:"set_meal"`
-}
-
 type VerifyUserInfo struct {
 	Token string `json:"token"`
-	User  string `json:"user"`
+	Name  string `json:"user"`
 }
 
 type LoginUserInfo struct {
-	User string `json:"user"`
-	Pwd  string `json: "pwd"`
+	Name   string `json:"user"`
+	Cipher string `json:"cipher"`
+}
+
+type DownTime struct {
+	User   string `json:"user"`
+	FileId string `json:"file_id"`
 }
 
 type AccountInfo struct {
-	User        string    `json:"user" bson:"user" valid:"-"`
-	Pwd         string    `json:"pwd" bson:"pwd" valid:"-"`
+	Name        string    `json:"name" bson:"user" valid:"-"`
+	Cipher      string    `json:"cipher" bson:"cipher" valid:"-"`
 	Email       string    `json:"email" bson:"email" valid:"-"`
 	RealIP      string    `json:"real_ip" bson:"real_ip"`
-	ExpiredTime time.Time `json:"expired_time" bson:"expired_time"`
+	ExpiredTime int64     `json:"expired_time" bson:"expired_time"`
 	CreateTime  time.Time `json:"create_time" bson:"create_time"`
-	DownTime    int       `json:"down_time" bson:"down_time"`
+	UpdateTime  int64     `json:"update_time" ,bson:"update_time"`
+	DayDownTime int       `json:"down_time" bson:"down_time"`
 	Vip         int       `json:"vip" bson:"vip"`
 	SetMeal     int       `json:"set_meal" bson:"set_meal"`
+}
+
+type Vip struct {
+	User    string `json:"user"`
+	SetMeal int    `json:"set_meal"`
 }
 
 func TableName() string {

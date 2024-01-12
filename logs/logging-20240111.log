@@ -1,0 +1,53 @@
+2024-01-11 18:39:13.320$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 18:40:28.171$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-11 18:40:29.297$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 18:41:06.198$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:03:47.774$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:04:34.837$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:04:34.839$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 630.334µs, resp: "注册信息不能为空"
+2024-01-11 23:05:01.582$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:05:01.582$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 51.916µs, resp: "注册信息不能为空"
+2024-01-11 23:07:01.403$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:09:46.462$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:09:51.156$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:10:26.835$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:10:30.102$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:13:35.307$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:13:48.620$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:18:18.966$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:18:22.859$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:18:23.917$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:22:49.416$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:22:50.434$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:24:30.751$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-11 23:24:46.214$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:24:46.232$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 17.099667ms, resp: "用户已经存在"
+2024-01-11 23:24:51.009$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:24:51.020$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 11.360917ms, resp: "用户已经存在"
+2024-01-11 23:24:58.152$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:24:58.176$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 23.359333ms, resp: "email已被注册"
+2024-01-11 23:25:00.502$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:25:00.523$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 20.623458ms, resp: "email已被注册"
+2024-01-11 23:25:04.784$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:25:04.806$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 21.550041ms, resp: "email已被注册"
+2024-01-11 23:25:28.571$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:25:28.727$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 155.129917ms, resp: "email已被注册"
+2024-01-11 23:27:57.231$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:27:57.240$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 8.011ms, resp: "用户已经存在"
+2024-01-11 23:29:27.915$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:29:27.942$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 26.178708ms, resp: "用户已经存在"
+2024-01-11 23:30:31.074$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:30:31.174$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 99.013916ms, resp: "用户已经存在"
+2024-01-11 23:33:19.270$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:33:19.459$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 187.439709ms, resp: "用户已经存在"
+2024-01-11 23:33:31.339$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:33:31.359$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /register, code: 400, cost: 19.090625ms, resp: "email已被注册"
+2024-01-11 23:33:38.945$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:33:40.061$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:39:23.692$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:39:52.855$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:39:53.924$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:41:14.782$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:41:15.860$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-11 23:42:03.962$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-11 23:42:05.029$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify

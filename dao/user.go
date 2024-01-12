@@ -14,10 +14,10 @@ var (
 	UserTab = model.TableName()
 )
 
-func VerifyUser(u, p string) (*model.LoginUserInfo, error) {
+func VerifyUser(u, p string) (*model.AccountInfo, error) {
 	var (
-		user   = new(model.LoginUserInfo)
-		filter = bson.M{"user": u, "pwd": p}
+		user   = new(model.AccountInfo)
+		filter = bson.M{"user": u, "cipher": p}
 	)
 	err := Modeler.FindOne(UserTab, filter, bson.M{}, user)
 	if err == mongo.ErrNoDocuments {
@@ -31,10 +31,10 @@ func VerifyUser(u, p string) (*model.LoginUserInfo, error) {
 
 }
 
-func GetUserInfo(name, email string) (*model.RegisterUserInfo, error) {
+func GetUserAccount(name string) (*model.AccountInfo, error) {
 	var (
-		svc    = new(model.RegisterUserInfo)
-		filter = bson.M{"user": name, "email": email}
+		svc    = new(model.AccountInfo)
+		filter = bson.M{"user": name}
 	)
 
 	err := Modeler.FindOne(UserTab, filter, bson.M{}, svc)
@@ -48,9 +48,34 @@ func GetUserInfo(name, email string) (*model.RegisterUserInfo, error) {
 	return svc, nil
 }
 
-func InsertUser(u *model.RegisterUserInfo) error {
+func GetEmail(email string) (*model.AccountInfo, error) {
+	var (
+		svc    = new(model.AccountInfo)
+		filter = bson.M{"email": email}
+	)
+
+	err := Modeler.FindOne(UserTab, filter, bson.M{}, svc)
+	if err == mongo.ErrNoDocuments {
+		return nil, errors.New("ErrNotFoundRecord")
+	}
+	if err != nil {
+		return nil, err
+	}
+
+	return svc, nil
+}
+
+func InsertUser(u *model.AccountInfo) error {
 	if err := Modeler.InsertOne(UserTab, u); err != nil {
 
+		return err
+	}
+	return nil
+}
+
+func UpdateAccount(account *model.AccountInfo) error {
+	filter := bson.M{"user": account.Name}
+	if err := Modeler.Upsert(UserTab, filter, account); err != nil {
 		return err
 	}
 	return nil

@@ -120,3 +120,15 @@ func GetToken(user string) string {
 	token, _ := GcmEncrypt(effectsTime)
 	return token
 }
+
+func Md5(key *string) {
+	hash := md5.New()
+
+	// 将字符串转换为字节数组并写入哈希对象
+	hash.Write([]byte(*key))
+
+	// 计算哈希值
+	hashInBytes := hash.Sum(nil)
+
+	*key = hex.EncodeToString(hashInBytes)
+}

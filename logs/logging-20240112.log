@@ -1,0 +1,92 @@
+2024-01-12 08:47:16.818$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 08:48:23.621$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 08:48:36.346$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 08:48:36.363$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 14.754708ms, resp: "用户名或密码错误"
+2024-01-12 08:48:41.323$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 08:48:41.332$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 9.267791ms, resp: "用户名或密码错误"
+2024-01-12 08:48:57.838$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /register
+2024-01-12 08:48:59.057$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 08:56:07.309$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:19:13.059$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:19:31.963$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:19:31.976$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 11.252541ms, resp: "用户名或密码错误"
+2024-01-12 09:23:32.557$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 09:23:44.186$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:23:44.202$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 13.875042ms, resp: "用户名或密码错误"
+2024-01-12 09:24:15.203$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 09:24:22.589$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:24:22.606$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 16.954209ms, resp: "用户名或密码错误"
+2024-01-12 09:26:27.680$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 09:26:31.578$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:26:32.767$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:27:21.706$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 09:27:26.259$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:27:41.299$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:27:42.507$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:29:46.260$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:29:47.317$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:31:06.770$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:31:10.344$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:31:29.989$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:31:31.110$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:31:44.783$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 09:32:13.926$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:32:15.141$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:32:55.154$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:33:14.168$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:38:39.136$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:40:07.620$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:07.621$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 29.584µs, resp: "文件Id 不能为空"
+2024-01-12 09:40:13.935$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:13.935$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 10.5µs, resp: "文件Id 不能为空"
+2024-01-12 09:40:15.771$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:15.772$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 34.333µs, resp: "文件Id 不能为空"
+2024-01-12 09:40:16.945$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:16.945$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 12.625µs, resp: "文件Id 不能为空"
+2024-01-12 09:40:20.712$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:20.713$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 38.375µs, resp: "文件Id 不能为空"
+2024-01-12 09:40:31.592$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:40:31.593$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 32.375µs, resp: "文件Id 不能为空"
+2024-01-12 09:41:38.737$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:41:38.737$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 12.083µs, resp: "文件Id 不能为空"
+2024-01-12 09:41:40.295$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:41:40.296$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 11.167µs, resp: "文件Id 不能为空"
+2024-01-12 09:41:44.220$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:41:44.220$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 11.958µs, resp: "文件Id 不能为空"
+2024-01-12 09:41:52.892$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:41:52.892$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 12.083µs, resp: "文件Id 不能为空"
+2024-01-12 09:41:56.718$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:41:56.719$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 23.084µs, resp: "文件Id 不能为空"
+2024-01-12 09:42:03.236$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:42:03.236$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 21.666µs, resp: "文件Id 不能为空"
+2024-01-12 09:52:13.025$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 09:52:14.124$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 09:52:30.768$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 09:52:30.768$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 500, cost: 33.417µs, resp: "文件Id 不能为空"
+2024-01-12 10:05:51.096$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 10:06:12.668$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:08:19.075$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:08:19.092$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 16.588708ms, resp: "以达最大文件下载次数"
+2024-01-12 10:08:27.536$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:08:27.547$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 10.379583ms, resp: "以达最大文件下载次数"
+2024-01-12 10:09:10.041$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:09:17.881$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:09:17.891$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 8.537292ms, resp: "以达最大文件下载次数"
+2024-01-12 10:11:07.010$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:11:07.043$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 32.046042ms, resp: "以达最大文件下载次数"
+2024-01-12 10:11:09.208$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:11:09.301$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 92.69975ms, resp: "以达最大文件下载次数"
+2024-01-12 10:24:56.895$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:24:56.909$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 12.849791ms, resp: "以达最大文件下载次数"
+2024-01-12 10:24:57.077$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:24:57.132$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 54.879167ms, resp: "以达最大文件下载次数"
+2024-01-12 10:24:57.944$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:24:57.957$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 11.912208ms, resp: "以达最大文件下载次数"
+2024-01-12 10:24:59.460$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:24:59.469$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 8.252ms, resp: "以达最大文件下载次数"
+2024-01-12 10:25:45.050$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:25:45.059$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 7.946459ms, resp: "以达最大文件下载次数"
+2024-01-12 10:25:47.067$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:25:47.079$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 11.808542ms, resp: "以达最大文件下载次数"
+2024-01-12 10:26:21.546$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
+2024-01-12 10:26:58.429$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
