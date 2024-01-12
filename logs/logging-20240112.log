@@ -344,3 +344,26 @@
 2024-01-12 15:07:30.401$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
 2024-01-12 15:07:54.030$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
 2024-01-12 15:09:19.015$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:48:21.820$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 15:49:32.084$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 15:49:33.132$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:49:34.822$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:53:50.070$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:55:04.451$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:56:56.202$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:00:25.346$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:00:26.834$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:02:20.467$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:03:04.686$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:23:53.031$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:24:31.080$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:24:46.464$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:24:52.599$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:24:55.371$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:24:57.656$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:25:00.468$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:25:04.136$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:25:08.028$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:25:08.030$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /verify, code: 500, cost: 74.667µs, resp: "非法请求"
+2024-01-12 16:25:10.914$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 16:25:10.915$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /verify, code: 500, cost: 48.667µs, resp: "非法请求"

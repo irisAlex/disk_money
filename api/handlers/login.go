@@ -106,6 +106,7 @@ func Login(c *gin.Context) {
 		Email:    account.Email,
 		Token:    aes.GetToken(lg.Name),
 		ExriTime: account.ExpiredTime,
+		SetMeal:  account.SetMeal,
 	})
 }
 
