@@ -3,6 +3,7 @@ package api
 import (
 	"money/dao"
 	"money/model"
+	"money/pkg/aes"
 	"money/pkg/prese"
 	"time"
 
@@ -13,8 +14,8 @@ func GrantVip(c *gin.Context) {
 	vip := &model.Vip{}
 	prese.ParseJSON(c, &vip)
 
-	if vip.User == "" {
-		prese.ResJSON(c, 400, "用户非法")
+	if vip.User == "" || vip.CardKey == "" {
+		prese.ResJSON(c, 400, "参数有问题")
 		return
 	}
 
@@ -26,22 +27,25 @@ func GrantVip(c *gin.Context) {
 
 	context := Context{}
 	var expri int64
-	switch vip.SetMeal {
-	case 0:
-		context.SetDiscountStrategy(RegularCustomerDiscount{})
+
+	setMeal, err := aes.DecryptCardKey(vip.CardKey)
+	if err != nil {
+		prese.ResJSON(c, 400, "解密失败")
+	}
+	switch setMeal {
 	case 1:
 		context.SetDiscountStrategy(MonthPremiumCustomerDiscount{})
 	case 2:
 		context.SetDiscountStrategy(QuaretrPremiumCustomerDiscount{})
 	case 3:
 		context.SetDiscountStrategy(YearPremiumCustomerDiscount{})
-	case -1:
+	case 4:
 		context.SetDiscountStrategy(PermanentPremiumCustomerDiscount{})
 	}
 
 	expri = context.CalculateDiscount()
 	u.ExpiredTime = time.Now().Add(time.Duration(expri) * 24 * time.Hour).Unix() //effects time after
-	u.SetMeal = vip.SetMeal
+	u.SetMeal = setMeal
 
 	err = dao.UpdateAccount(u)
 	if err != nil {

@@ -32,7 +32,7 @@ type AccountInfo struct {
 
 type Vip struct {
 	User    string `json:"user"`
-	SetMeal int    `json:"set_meal"`
+	CardKey string `json:"card_key"`
 }
 
 func TableName() string {

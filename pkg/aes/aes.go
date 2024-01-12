@@ -17,14 +17,14 @@ import (
 
 const AUTHORIZATION = "9505C098192D4BCECE6C22F77E63BFB2"
 
-//加密字符串
-func GcmEncrypt(plaintext string) (string, error) {
+// 加密字符串
+func GcmEncrypt(plaintext string) ([]byte, error) {
 	if len(AUTHORIZATION) != 32 && len(AUTHORIZATION) != 24 && len(AUTHORIZATION) != 16 {
-		return "", errors.New("the length of key is error")
+		return []byte{}, errors.New("the length of key is error")
 	}
 
 	if len(plaintext) < 1 {
-		return "", errors.New("plaintext is null")
+		return []byte{}, errors.New("plaintext is null")
 	}
 
 	keyByte := []byte(AUTHORIZATION)
@@ -32,38 +32,37 @@ func GcmEncrypt(plaintext string) (string, error) {
 
 	block, err := aes.NewCipher(keyByte)
 	if err != nil {
-		return "", err
+		return []byte{}, err
 	}
 
 	aesGcm, err := cipher.NewGCM(block)
 	if err != nil {
-		return "", err
+		return []byte{}, err
 	}
 
 	nonce := make([]byte, 12)
 	if _, err := io.ReadFull(rand.Reader, nonce); err != nil {
-		return "", err
+		return []byte{}, err
 	}
 
-	seal := aesGcm.Seal(nonce, nonce, plainByte, nil)
-	return base64.URLEncoding.EncodeToString(seal), nil
+	return aesGcm.Seal(nonce, nonce, plainByte, nil), nil
+	// return base64.URLEncoding.EncodeToString(seal), nil
 }
 
-//解密字符串
-func GcmDecrypt(cipherText string) (string, error) {
+// 解密字符串
+func GcmDecrypt(cipherByte []byte) (string, error) {
 	if len(AUTHORIZATION) != 32 && len(AUTHORIZATION) != 24 && len(AUTHORIZATION) != 16 {
 		return "", errors.New("the length of key is error")
 	}
 
-	if len(cipherText) < 1 {
+	if len(cipherByte) < 1 {
 		return "", errors.New("cipherText is null")
 	}
 
-	cipherByte, err := base64.URLEncoding.DecodeString(cipherText)
-	if err != nil {
-		return "", err
-	}
-
+	// cipherByte, err := base64.URLEncoding.DecodeString(cipherText)
+	// if err != nil {
+	// 	return "", err
+	// }
 	if len(cipherByte) < 12 {
 		return "", errors.New("cipherByte is error")
 	}
@@ -89,7 +88,7 @@ func GcmDecrypt(cipherText string) (string, error) {
 	return string(plainByte), nil
 }
 
-//生成32位md5字串
+// 生成32位md5字串
 func GetAesKey(s string) string {
 	h := md5.New()
 	h.Write([]byte(s))
@@ -118,7 +117,7 @@ func JSONMarshal(obj interface{}) ([]byte, error) {
 func GetToken(user string) string {
 	effectsTime := user + "|" + strconv.FormatInt(time.Now().Add(24*time.Hour).Unix(), 10) //effects time after
 	token, _ := GcmEncrypt(effectsTime)
-	return token
+	return base64.URLEncoding.EncodeToString(token)
 }
 
 func Md5(key *string) {
@@ -131,4 +130,33 @@ func Md5(key *string) {
 	hashInBytes := hash.Sum(nil)
 
 	*key = hex.EncodeToString(hashInBytes)
+}
+
+func VerifyToken(token string) (string, error) {
+	cipherByte, err := base64.URLEncoding.DecodeString(token)
+	if err != nil {
+		return "", errors.New("Token 不存在")
+	}
+
+	verfiyInfo, err := GcmDecrypt(cipherByte)
+	if err != nil {
+		return "", err
+	}
+
+	return verfiyInfo, nil
+}
+
+func EncryptCardKey(ty string) {
+
+}
+
+func DecryptCardKey(cardkey string) (int, error) {
+	ck, err := GcmDecrypt([]byte(cardkey))
+	if err != nil {
+		return 0, errors.New("解密失败")
+	}
+
+	setMeal, _ := strconv.Atoi(string(ck[0]))
+	return setMeal, nil
+
 }

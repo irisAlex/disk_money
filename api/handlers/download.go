@@ -17,7 +17,7 @@ const (
 	M = 1
 	Q = 2
 	Y = 3
-	P = -1
+	P = 4
 )
 
 func DownloadFile(c *gin.Context) {
@@ -29,7 +29,7 @@ func DownloadFile(c *gin.Context) {
 		return
 	}
 
-	verfiyInfo, _ := aes.GcmDecrypt(Token)
+	verfiyInfo, _ := aes.VerifyToken(Token)
 
 	info := strings.Split(verfiyInfo, "|")
 

@@ -122,7 +122,7 @@ func Verify(c *gin.Context) {
 		return
 	}
 
-	verfiyInfo, _ := aes.GcmDecrypt(v.Token)
+	verfiyInfo, _ := aes.VerifyToken(v.Token)
 
 	info := strings.Split(verfiyInfo, "|")
 
