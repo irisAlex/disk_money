@@ -90,3 +90,257 @@
 2024-01-12 10:25:47.079$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method GET url /downloadFile?file_id=4223602, code: 400, cost: 11.808542ms, resp: "以达最大文件下载次数"
 2024-01-12 10:26:21.546$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /downloadFile?file_id=4223602
 2024-01-12 10:26:58.429$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 11:59:16.002$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:01:35.877$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:02:02.382$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cashvip
+2024-01-12 12:02:02.382$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cashvip, code: 404, cost: 1.959µs, resp: 
+2024-01-12 12:02:09.960$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cashVip
+2024-01-12 12:02:09.962$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cashVip, code: 400, cost: 912µs, resp: "参数有问题"
+2024-01-12 12:02:47.692$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:02:47.693$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 404, cost: 2.291µs, resp: 
+2024-01-12 12:02:57.625$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:04:39.735$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:04:39.737$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 775.667µs, resp: "参数有问题"
+2024-01-12 12:05:16.498$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:05:16.499$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 31.292µs, resp: "参数有问题"
+2024-01-12 12:05:17.717$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:05:17.717$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 22.375µs, resp: "参数有问题"
+2024-01-12 12:05:21.215$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:05:21.215$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 22.333µs, resp: "参数有问题"
+2024-01-12 12:05:21.727$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:05:21.727$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 22.917µs, resp: "参数有问题"
+2024-01-12 12:05:46.588$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:05:55.766$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:05:55.766$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 105.625µs, resp: "参数有问题"
+2024-01-12 12:06:36.829$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:06:36.830$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 49.792µs, resp: "参数有问题"
+2024-01-12 12:07:14.610$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:07:30.200$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:07:30.202$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 124.25µs, resp: "参数有问题"
+2024-01-12 12:07:30.942$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:07:30.942$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 28.334µs, resp: "参数有问题"
+2024-01-12 12:07:31.500$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:07:31.500$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 28.834µs, resp: "参数有问题"
+2024-01-12 12:07:31.871$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:07:31.871$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 28.292µs, resp: "参数有问题"
+2024-01-12 12:07:59.364$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:08:03.774$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:08:03.774$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 147.584µs, resp: "参数有问题"
+2024-01-12 12:09:03.642$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:09:03.643$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 34.25µs, resp: "参数有问题"
+2024-01-12 12:09:33.463$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:10:34.762$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:10:53.226$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:10:53.237$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 11.257292ms, resp: "用户不存在"
+2024-01-12 12:10:59.988$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:12:07.202$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:12:19.045$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:12:19.059$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 12.969042ms, resp: "解密失败"
+2024-01-12 12:16:39.491$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:17:13.952$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:17:13.966$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 12.361375ms, resp: "解密失败"
+2024-01-12 12:17:14.550$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 12:17:14.720$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 169.582ms, resp: "解密失败"
+2024-01-12 12:17:23.648$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /get_card_key
+2024-01-12 12:17:23.649$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /get_card_key, code: 404, cost: 2.459µs, resp: 
+2024-01-12 12:17:28.374$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:17:47.261$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:17:51.523$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:32:08.377$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:32:12.724$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:32:57.580$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:33:04.384$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:33:59.675$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:34:03.507$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:35:46.072$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:35:50.752$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:38:21.257$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:38:25.985$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:38:56.971$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:39:01.198$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:40:11.992$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:40:16.806$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:40:53.436$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:40:57.046$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:17.266$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 12:45:21.509$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:26.172$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:38.159$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:42.246$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:46.069$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 12:45:49.126$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:11:56.784$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 13:14:23.571$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:14:57.274$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 13:15:01.608$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:16:12.738$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 13:16:16.645$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:16:17.394$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:16:18.146$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:16:18.766$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:16:19.375$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 13:25:20.504$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 13:25:20.571$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /login, code: 400, cost: 65.507958ms, resp: "用户名或密码错误"
+2024-01-12 13:25:26.756$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /login
+2024-01-12 13:25:27.822$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:25:58.671$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:26:05.597$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:26:56.034$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:00.702$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:03.805$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:06.877$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:09.393$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:25.973$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:27:27.740$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:29:20.340$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:29:22.726$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:29:24.613$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:30:19.095$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:33:02.028$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:33:06.426$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:33:08.874$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:33:50.537$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:33:52.862$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:34:58.388$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:35:01.641$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:35:04.082$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:37:29.305$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:37:32.095$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:38:24.765$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:38:27.989$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:38:31.056$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:38:50.238$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:39:28.341$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:41:33.340$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:41:54.164$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:42:00.719$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:42:02.986$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:42:05.048$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:42:26.386$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:43:24.451$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:43:30.978$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:43:48.058$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:46:02.701$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:46:19.077$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:46:46.762$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:47:24.522$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:47:34.863$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:48:24.263$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:48:29.807$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:48:50.775$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:50:26.906$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:52:40.797$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:52:57.889$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:54:08.337$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:55:11.385$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:55:56.321$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:57:25.554$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:58:57.217$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 13:59:18.783$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:00:12.682$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:00:27.070$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:05:55.640$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:06:54.739$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:07:30.205$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:09:18.454$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:09:31.402$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:11:19.317$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:18:05.216$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:19:05.287$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:19:19.327$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:19:22.266$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:19:38.331$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:20:16.243$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:22:08.884$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:22:12.466$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:22:12.921$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:24:18.057$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:24:39.478$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:25:43.445$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:26:47.760$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:27:11.486$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:27:45.773$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:28:51.298$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:30:08.428$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:31:07.492$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:31:31.295$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:31:34.750$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:32:35.393$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:32:44.992$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:33:24.699$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:34:10.706$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:34:49.271$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:38:59.773$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:39:42.254$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 14:39:43.303$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 14:39:44.088$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 14:40:01.932$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:40:01.933$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 289.958µs, resp: "参数有问题"
+2024-01-12 14:41:12.951$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:42:52.554$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:43:17.076$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 14:43:22.869$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:43:36.231$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:44:43.460$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 14:44:48.558$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:44:48.667$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 109.312875ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:46:47.989$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:46:48.010$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 21.126125ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:46:57.527$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:46:57.636$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 108.275458ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:47:03.913$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:47:03.939$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 25.351666ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:47:05.524$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:47:05.543$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 18.878667ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:47:20.824$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:47:51.020$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:47:51.116$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 95.780958ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:47:59.987$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:48:00.015$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 27.153584ms, resp: "解密失败"
+2024-01-12 14:48:48.836$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:48:48.845$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 9.314625ms, resp: "解密失败"
+2024-01-12 14:50:35.585$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:50:41.774$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:50:41.797$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 22.628583ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:50:48.983$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:50:49.006$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 22.548041ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:50:49.754$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:50:49.893$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 139.122708ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:50:51.179$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 14:50:51.200$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 20.47875ms, resp: "卡已经被兑换过了，请换其他的在试"
+2024-01-12 14:51:07.140$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:56:43.900$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 14:56:48.508$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 14:56:59.267$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 14:57:04.651$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:00:17.305$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 15:00:21.580$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 15:00:30.391$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:01:58.526$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:01:58.544$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 17.061375ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:02:00.000$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:02:00.022$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 21.594542ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:02:25.257$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 15:02:46.563$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:04:15.025$$192.168.0.100$$INFO$$logging$$app/server.go:34:Start()$$http server start, listen addr: [0.0.0.0:8088]
+2024-01-12 15:04:35.334$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method GET url /get_card_key
+2024-01-12 15:04:42.378$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:04:59.211$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:04:59.232$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 20.159917ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:05:37.825$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:14.109$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:20.632$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:20.654$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 20.832417ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:22.032$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:22.052$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 19.222542ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:23.018$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:23.038$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 18.653375ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:23.707$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:23.727$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 18.643917ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:24.122$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:24.139$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 16.503541ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:24.360$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /cash_vip
+2024-01-12 15:07:24.439$$192.168.0.100$$WARNING$$logging$$middleware/logging.go:31:func1()$$http response method POST url /cash_vip, code: 400, cost: 77.983541ms, resp: "此卡密已经被兑换过了或不存在，请换其他的卡密"
+2024-01-12 15:07:30.401$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:07:54.030$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify
+2024-01-12 15:09:19.015$$192.168.0.100$$INFO$$logging$$middleware/logging.go:16:func1()$$http request method POST url /verify

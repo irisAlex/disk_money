@@ -35,6 +35,6 @@ type Vip struct {
 	CardKey string `json:"card_key"`
 }
 
-func TableName() string {
+func (a AccountInfo) TableName() string {
 	return "account"
 }

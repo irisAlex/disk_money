@@ -14,7 +14,9 @@ func RegisterRouter(app *gin.Engine) error {
 	v1.POST("register", api.Register)
 	v1.POST("verify", api.Verify)
 	v1.POST("login", api.Login)
-	v1.POST("fileUpload", api.UploadFile)
-	v1.GET("downloadFile", api.DownloadFile)
+	v1.POST("file_upload", api.UploadFile)
+	v1.GET("download_file", api.DownloadFile)
+	v1.POST("cash_vip", api.GrantVip)
+	v1.GET("get_card_key", api.GenerateCardKey)
 	return nil
 }

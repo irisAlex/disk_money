@@ -1,6 +1,8 @@
 package api
 
 import (
+	"fmt"
+	"math/rand"
 	"money/dao"
 	"money/model"
 	"money/pkg/aes"
@@ -9,6 +11,14 @@ import (
 
 	"github.com/gin-gonic/gin"
 )
+
+// 设置密钥
+const KEY = "money10000@#$%li"
+
+type resCardData struct {
+	SetMeal  int   `json:"set_meal"`
+	ExriTime int64 `json:"exri_time"`
+}
 
 func GrantVip(c *gin.Context) {
 	vip := &model.Vip{}
@@ -20,19 +30,31 @@ func GrantVip(c *gin.Context) {
 	}
 
 	u, err := dao.GetUserAccount(vip.User)
-	if u.Name == "" || err != nil {
+	if err != nil || u.Name == "" {
 		prese.ResJSON(c, 400, "用户不存在")
 		return
 	}
 
 	context := Context{}
 	var expri int64
-
-	setMeal, err := aes.DecryptCardKey(vip.CardKey)
+	decryptedCardNumber, err := aes.VipCardDecrypt(vip.CardKey, KEY)
 	if err != nil {
 		prese.ResJSON(c, 400, "解密失败")
+		return
 	}
-	switch setMeal {
+	card, err := dao.GetCardInfoByKey(decryptedCardNumber)
+
+	if err != nil {
+		prese.ResJSON(c, 400, "密钥不存在")
+		return
+	}
+
+	if !card.Available {
+		prese.ResJSON(c, 400, "此卡密已经被兑换过了或不存在，请换其他的卡密")
+		return
+	}
+
+	switch card.SetMeal {
 	case 1:
 		context.SetDiscountStrategy(MonthPremiumCustomerDiscount{})
 	case 2:
@@ -45,13 +67,48 @@ func GrantVip(c *gin.Context) {
 
 	expri = context.CalculateDiscount()
 	u.ExpiredTime = time.Now().Add(time.Duration(expri) * 24 * time.Hour).Unix() //effects time after
-	u.SetMeal = setMeal
-
+	u.SetMeal = card.SetMeal
 	err = dao.UpdateAccount(u)
 	if err != nil {
 		prese.ResJSON(c, 500, "服务故障")
 		return
 	}
 
-	prese.ResJSON(c, 200, "更新成功")
+	card.Available = false
+	err = dao.UpdateCardInfo(card)
+	if err != nil {
+		prese.ResJSON(c, 500, "服务故障")
+		return
+	}
+
+	prese.ResJSON(c, 200, &resCardData{
+		ExriTime: u.ExpiredTime,
+		SetMeal:  u.SetMeal,
+	})
+}
+
+func GenerateCardKey(c *gin.Context) {
+	cardNumber, err := aes.GenerateRandomString(16)
+	if err != nil {
+		fmt.Println("生成充值卡号时发生错误:", err)
+		return
+	}
+	// 加密充值卡号
+	encryptedCardNumber, err := aes.VipCardEncrypt(cardNumber, KEY)
+	if err != nil {
+		fmt.Println("加密时发生错误:", err)
+		return
+	}
+
+	fmt.Println(encryptedCardNumber)
+
+	rand.Seed(time.Now().UnixNano())
+	// 生成1到4之间的随机整数
+	randomNumber := rand.Intn(4) + 1
+	dao.InsertCard(&model.Card{
+		CardSecret: cardNumber,
+		SetMeal:    randomNumber,
+		Available:  true,
+	})
+
 }

@@ -146,17 +146,56 @@ func VerifyToken(token string) (string, error) {
 	return verfiyInfo, nil
 }
 
-func EncryptCardKey(ty string) {
+func GenerateRandomString(length int) (string, error) {
+	const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+	randomBytes := make([]byte, length)
 
-}
-
-func DecryptCardKey(cardkey string) (int, error) {
-	ck, err := GcmDecrypt([]byte(cardkey))
+	_, err := rand.Read(randomBytes)
 	if err != nil {
-		return 0, errors.New("解密失败")
+		return "", err
 	}
 
-	setMeal, _ := strconv.Atoi(string(ck[0]))
-	return setMeal, nil
+	for i := range randomBytes {
+		randomBytes[i] = charset[int(randomBytes[i])%len(charset)]
+	}
 
+	return string(randomBytes), nil
+}
+
+func VipCardEncrypt(plainText, key string) (string, error) {
+	block, err := aes.NewCipher([]byte(key))
+
+	if err != nil {
+		return "", err
+	}
+
+	cipherText := make([]byte, aes.BlockSize+len(plainText))
+	iv := cipherText[:aes.BlockSize]
+	if _, err := io.ReadFull(rand.Reader, iv); err != nil {
+		return "", err
+	}
+	stream := cipher.NewCTR(block, iv)
+	stream.XORKeyStream(cipherText[aes.BlockSize:], []byte(plainText))
+
+	return base64.StdEncoding.EncodeToString(cipherText), nil
+}
+
+func VipCardDecrypt(cipherText, key string) (string, error) {
+	block, err := aes.NewCipher([]byte(key))
+	if err != nil {
+		return "", err
+	}
+
+	decodedCipherText, err := base64.StdEncoding.DecodeString(cipherText)
+	if err != nil {
+		return "", err
+	}
+
+	iv := decodedCipherText[:aes.BlockSize]
+	decodedCipherText = decodedCipherText[aes.BlockSize:]
+
+	stream := cipher.NewCTR(block, iv)
+	stream.XORKeyStream(decodedCipherText, decodedCipherText)
+
+	return string(decodedCipherText), nil
 }
