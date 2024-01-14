@@ -18,5 +18,7 @@ func RegisterRouter(app *gin.Engine) error {
 	v1.GET("download_file", api.DownloadFile)
 	v1.POST("cash_vip", api.GrantVip)
 	v1.GET("get_card_key", api.GenerateCardKey)
+
+	v1.POST("chat", api.Chat)
 	return nil
 }
