@@ -1,12 +1,11 @@
 package api
 
 import (
-	"fmt"
-	"math/rand"
 	"money/dao"
 	"money/model"
 	"money/pkg/aes"
 	"money/pkg/prese"
+	"strconv"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -92,23 +91,28 @@ type ResCardKey struct {
 }
 
 func GenerateCardKey(c *gin.Context) {
+	tye := c.Query("card_type")
+	if tye == "" {
+		prese.ResJSON(c, 500, "非法访问")
+		return
+	}
+
 	cardNumber, err := aes.GenerateRandomString(16)
 	if err != nil {
-		fmt.Println("生成充值卡号时发生错误:", err)
+		prese.ResJSON(c, 500, "生成充值卡号时发生错误:")
 		return
 	}
 	// 加密充值卡号
 	encryptedCardNumber, err := aes.VipCardEncrypt(cardNumber, KEY)
 	if err != nil {
-		fmt.Println("加密时发生错误:", err)
+		prese.ResJSON(c, 500, "加密时发生错误:")
 		return
 	}
-	rand.Seed(time.Now().UnixNano())
-	// 生成1到4之间的随机整数
-	randomNumber := rand.Intn(4) + 1
+
+	Number, _ := strconv.Atoi(tye)
 	dao.InsertCard(&model.Card{
 		CardSecret: cardNumber,
-		SetMeal:    randomNumber,
+		SetMeal:    Number,
 		Available:  true,
 	})
 
