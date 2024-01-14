@@ -1,5 +1,5 @@
 mongodb:
-  endpoint: mongodb://38.47.101.220:8290
+  endpoint: mongodb://127.0.0.1:8290
   db: monery
 
 log:
