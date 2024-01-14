@@ -87,6 +87,10 @@ func GrantVip(c *gin.Context) {
 	})
 }
 
+type ResCardKey struct {
+	Key string `json:"key"`
+}
+
 func GenerateCardKey(c *gin.Context) {
 	cardNumber, err := aes.GenerateRandomString(16)
 	if err != nil {
@@ -99,9 +103,6 @@ func GenerateCardKey(c *gin.Context) {
 		fmt.Println("加密时发生错误:", err)
 		return
 	}
-
-	fmt.Println(encryptedCardNumber)
-
 	rand.Seed(time.Now().UnixNano())
 	// 生成1到4之间的随机整数
 	randomNumber := rand.Intn(4) + 1
@@ -109,6 +110,10 @@ func GenerateCardKey(c *gin.Context) {
 		CardSecret: cardNumber,
 		SetMeal:    randomNumber,
 		Available:  true,
+	})
+
+	prese.ResJSON(c, 200, &ResCardKey{
+		Key: encryptedCardNumber,
 	})
 
 }
