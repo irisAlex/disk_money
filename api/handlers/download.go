@@ -3,11 +3,13 @@ package api
 // HandleDownloadFile 下载文件
 
 import (
+	"math/rand"
 	"money/dao"
 	"money/pkg/aes"
 	"money/pkg/client"
 	"money/pkg/prese"
 	"strings"
+	"time"
 
 	"github.com/gin-gonic/gin"
 )
@@ -76,14 +78,23 @@ func DownloadFile(c *gin.Context) {
 		return
 	}
 
+	vipChan := strings.Split(content, "|")
+	if len(vipChan) < 1 {
+		prese.ResJSON(c, 400, "通道目前不可用")
+		return
+	}
+
 	account.DayDownTime += 1
+	rand.Seed(time.Now().UnixNano())
+	// 生成1到4之间的随机整数
+	randomNumber := rand.Intn(4) + 1
 
 	if dao.UpdateAccount(account) != nil {
 		prese.ResJSON(c, 500, "服务异常")
 		return
 	}
 	prese.ResJSON(c, 200, resDownData{
-		Ct: content,
+		Ct: vipChan[randomNumber],
 	})
 }
 
